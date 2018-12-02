@@ -12,6 +12,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
+  
   body {
       font: 400 15px/1.8 Lato, sans-serif;
       color: #777;
@@ -23,10 +24,10 @@
       color: deeppink !important;
 
   }
+  
   .container {
       padding: 80px 120px;
   }
-
   .carousel-inner img {
       margin: auto;
       width: 100%;
@@ -37,8 +38,7 @@
       font-family: Acme;
       font-size: 26px;
   }
-
- .carousel-caption {
+  .carousel-caption {
     
     right : auto;
     left  : 2%;
@@ -50,15 +50,12 @@
        display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
     }
   }
-
   @media (max-width: 650px) {
     .carousel-caption h4{
        display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
     }
   }
 
-
-  /* Add a dark background color with a little bit see-through */  
   .navbar{
       /*font-family: Montserrat, sans-serif;*/
       margin-bottom: 0;
@@ -68,11 +65,9 @@
       letter-spacing: 4px;
       opacity: 0.9;
   }
-      /* Add a gray color to all navbar links */
   .navbar li a, .navbar { 
       color: #d5d5d5 !important;
   }
-      /* On hover, the links will turn white */
   .navbar-nav li a:hover {
       color: deeppink !important;
   }
@@ -95,8 +90,7 @@
     font-size: 11px !important;
 
 
-  }
- 
+  } 
   @media screen and (max-width: 700px) {
     .col-sm-4, .col-sm-6 {
         display: none;
@@ -105,9 +99,9 @@
 
   </style>
 </head>
+    
 <body id="music" data-spy="scroll" data-target=".navbar" data-offset="50">
 
-<!-- Navigation Bar -->
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -120,17 +114,17 @@
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="band_nav.html">Home</a></li>
-        <li><a href="band_nav.html#band">Band</a></li>
-        <li><a href="band_nav.html#instrument">Instruments</a></li>
-        <li><a href="band_nav.html#contact">Contact</a></li>
+        <li><a href="band_homepage.html">Home</a></li>
+        <li><a href="band_homepage.html#band">Band</a></li>
+        <li><a href="band_homepage.html#instrument">Instruments</a></li>
+        <li><a href="band_homepage.html#contact">Contact</a></li>
         <li><a href="#">Events</a></li>
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Music
           <span class="caret"></span></a>
           <ul class="dropdown-menu">
             <li><a href="#songs">Songs</a></li>
-            <li><a href="band_nav.html#video">Vedios</a></li>
+            <li><a href="band_homepage.html#video">Vedios</a></li>
           </ul>
         </li>
         <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
@@ -160,7 +154,7 @@ our lyrics and listening to our tunes!</p>
     </div>
 </div>
 
-  <div class="modal fade" id="downloadSong" role="dialog">
+<div class="modal fade" id="downloadSong" role="dialog">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
         <div class="modal-header">
@@ -236,7 +230,7 @@ Love Jazzerdous! </p>
   </div>
     
     </div>
-<!-- Footer -->
+
 <footer class="page-footer special-color-dark pt-4" style="background-color:#2d2d30">
     <br>
       <!-- Social buttons -->
@@ -280,7 +274,6 @@ Love Jazzerdous! </p>
     </div>
 
   </footer>
-  <!-- Footer -->
 
 </body>
 </html>
