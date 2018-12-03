@@ -8,6 +8,7 @@
   <title>Jazzerdous</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/ >
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
@@ -40,7 +41,8 @@
       margin: auto;
       width: 100%;
       height: auto;
-  }
+      position: relative;
+    }
   .carousel-caption h4 {
       color: black !important;
       font-family: Acme;
@@ -109,87 +111,6 @@
 <!-- Body Section  -->
 <body id="homePage" data-spy="scroll" data-target=".navbar" data-offset="50">
 
-<!-- Navigation Bar -->
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="#homePage" style="font color: deeppink">Jazzerdous</a>
-    </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#homePage">Home</a></li>
-        <li><a href="#band">Band</a></li>
-        <li><a href="#instrument">Instruments</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#tour">Events</a></li>
-        <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Music<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="band_music.html">Songs</a></li>
-                    <li><a href="#video">Videos</a></li>
-                </ul>
-        </li>
-        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- Carousel -->
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-    </ol>
-
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <img class ="img-responsive" src="img/jazzmural1.jpg" alt="Our Music">
-        <div class="carousel-caption">
-          <h4>Boston Based Jazz Band</h4>
-          <p style="color: black ;white-space: pre">We love music and so do you.Spruce up your nightlife!
-              Come see us, we play all over the Boston area</p>
-        </div>      
-      </div>
-
-<!--
-      <div class="item">
-        <img class="img-responsive" src="img/Murals0062.jpg" alt="Our Music">
-        <div class="carousel-caption">
-          <h4>Our Music</h4>
-          <p style="color: black;white-space: pre">We fuel our music with an assortment of inspirations.
-              Ranging from classical sounds to traditional blues.
-              Learn more about our songs by reading our lyrics and listening to our tunes!</p>
-        </div>      
-      </div>
--->
-        
-      <div class="item">
-        <img class="img-responsive" src="img/jazzmurals.jpg" alt="Live Events">
-        <div class="carousel-caption">
-          <h4 style="margin-top: 75%;font color: white">Live Events</h4>
-          <p style="color: whitesmoke;white-space: pre;">While we would love for you to engage with us online; we would love to meet you in person!.
-        We play concerts at small and large venues, so don't be shy, come see us play</p>
-        </div>      
-      </div>
-    </div>
-
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-</div>
-
 <!-- Send msg -->
 <div class="modal fade" id="sendMsg" role="dialog">
     <div class="modal-dialog modal-sm">
@@ -251,13 +172,82 @@ Love, Jazzerdous  </p>
       </div>
     </div>
   </div>
+
+<!-- Navigation Bar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#homePage" style="font color: deeppink">Jazzerdous</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#homePage">Home</a></li>
+        <li><a href="#band">Band</a></li>
+        <li><a href="#instrument">Instruments</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#tour">Events</a></li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Music<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="band_music.html">Songs</a></li>
+                    <li><a href="#video">Videos</a></li>
+                </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Carousel -->
+<div id="myCarousel" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+    </ol>
+
+    <div class="carousel-inner" role="listbox">
+      <div class="item active">
+        <img class ="responsive" src="img/jazzmural1.jpg" alt="Our Music">
+        <div class="carousel-caption">
+          <h4>Boston Based Jazz Band</h4>
+          <p style="color: black ;white-space: pre" >We love music and so do you.  Spruce up your nightlife!
+   Come see us, we play all over the Boston area.</p>
+        </div>      
+      </div>
+        
+      <div class="item">
+        <img src="img/jazzmurals.jpg" alt="Live Events">
+        <div class="carousel-caption">
+          <h4 style="margin-top: 75%;font color: white">Live Events</h4>
+          <p style="color: whitesmoke;white-space: pre;">While we would love for you to engage with us online; we would love to meet you in person!.
+        We play concerts at small and large venues, so don't be shy, come see us play</p>
+        </div>      
+      </div>
+    </div>
+
+    <!-- Left and right controls -->
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+</div>
     
 <!-- Container (About the Band) -->
 <div id="band" class="container">
   <div class="row">
     <div class="col-sm-8">
         <h3 style="text-align: center">THE BAND</h3>    
-         <p>We are five person jazz band with an eclectic sound. Our inspirations stem from country to classical and jazz. We fuel our music with an assortment of inspirations, ranging from classical sounds to traditional blues.  We are influenced by all of the great jazz artists, present and past, but we also aim to create unique music which resonates with our spirit and our listeners. We cherish Boston's lively music scene, which keeps us grounded in our roots as well as new inspiration. 
+         <p>We are five-person jazz band with an eclectic sound. Our inspirations stem from country to classical and jazz. We fuel our music with an assortment of inspirations, ranging from classical sounds to traditional blues.  We are influenced by all of the great jazz artists, present and past, but we also aim to create unique music which resonates with our spirit and our listeners. We cherish Boston's lively music scene, which keeps us grounded in our roots as well as new inspiration. 
           <br />
           <br/>
         Learn more about our songs by reading our lyrics and listening to our tunes. We would love to see you at a concert. Thank you for listening and for tuning in!</p>
@@ -278,9 +268,9 @@ Love, Jazzerdous  </p>
          <p>Most of us play multiple instruments but we do have our favorites. </p>
 
         <ul>
-          <li>Horns - We have a brilliant trumpet player and saxaphonist who keep us on our toes with their improvisational skills. </li><br/>
-          <li>Rythm - Our drummist keeps a steady beat and our pianist plays lively, rhythmic melodies. </li><br/>
-          <li>Guitar - Our guitarist keeps our pianist company, playing beautiful melodies.</li><br/>
+          <li>Saxaphonist - We have a brilliant trumpet player and saxaphonist who keep us on our toes with their improvisational skills. </li><br/>
+          <li>Drummer - Our drummist keeps a steady beat and our pianist plays lively, rhythmic melodies. </li><br/>
+          <li>Rythm - Our guitarist keeps our pianist company, playing beautiful melodies.</li><br/>
         </ul>
       </div>
     <div class="col-sm-4">
@@ -293,33 +283,30 @@ Love, Jazzerdous  </p>
 
 <!-- Container (Gallery) -->
 <div id="gallery" class="container">
-<h3 style="text-align: center">GALLERIE</h3> 
-    <p>We have performed all over the world.  Check out some of our past concerts below!</p>
+<h3 style="text-align: center">GALLERY</h3> 
+    <p>We have performed all different cities near Boston area.  Check out some of our past concerts!</p>
 
 <p>
      Would you like for us to visit you?  Send us an email or connect with us on social media and request a concert near you.  We might not make it out to see you soon, but we’ll definitely keep you on our radar! </p>
 
-     <p>Until then, enjoy a magical journey with us around the world by checking out our photos below! </p>
+     <p>Until then, enjoy a magical journey with us around the world by checking out our photos! </p>
   <div class="row text-center">
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="img/vidar-nordli-mathisen-599293-unsplash.jpg" alt="Paris">
-        <p><strong>Paris</strong></p>
-        <p>We have Paris on our radar again soon!</p>
+        <img src="img/hanny-naibaho-388579-unsplash.jpg" alt="Paris">
+        <p><strong>Brookline</strong></p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
         <img src="img/keagan-henman-1126214-unsplash.jpg" alt="New York">
-        <p><strong>New York</strong></p>
-        <p>The city that never sleeps is missing us.</p>
+        <p><strong>Winchester</strong></p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
         <img src="img/nqobile-vundla-573152-unsplash.jpg" alt="Bharath">
-        <p><strong>India!</strong></p>
-        <p>The best country so far.</p>
+        <p><strong>Revere</strong></p>
       </div>
     </div>
       
@@ -328,22 +315,19 @@ Love, Jazzerdous  </p>
     <div class="col-sm-4">
       <div class="thumbnail">
         <img src="img/kyle-smith-1136780-unsplash.jpg" alt="Nashville">
-        <p><strong>Nashville</strong></p>
-        <p>The capital of country music.</p>
+        <p><strong>Arlington</strong></p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
         <img src="img/bailey-torres-677277-unsplash.jpg" alt="Mexico">
-        <p><strong>Mexico</strong></p>
-        <p>So colorful and the people were so warm!</p>
+        <p><strong>Chelsea</strong></p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
         <img src="img/yvette-de-wit-118721-unsplash.jpg" alt="Australia">
-        <p><strong>Australia</strong></p>
-        <p>We love the animals and the views. </p>
+        <p><strong>Cambridge</strong></p>
       </div>
     </div>
     </div>
@@ -373,7 +357,7 @@ Love, Jazzerdous  </p>
     
 <!-- Container (Contact Section) -->
 <div id="contact" class="container">
-  <h3 class="text-center">Contact</h3>
+  <h3 class="text-center">CONTACT</h3>
   <div class="row">
     <div class="col-md-4">
       <p>Drop us a line.</p>
@@ -414,27 +398,7 @@ Love, Jazzerdous  </p>
         </li>
         <li class="list-inline-item">
           <a class="btn-floating btn-tw mx-1">
-            <i class="fa fa-twitter"> </i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a class="btn-floating btn-gplus mx-1">
-            <i class="fa fa-google-plus"> </i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a class="btn-floating btn-li mx-1">
-            <i class="fa fa-linkedin"> </i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a class="btn-floating btn-dribbble mx-1">
-            <i class="fa fa-dribbble"> </i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-            <a href="#homePage" title="To Top">
-          <span class="glyphicon glyphicon-chevron-up"></span>
+            <i class="fa fa-instagram"> </i>
           </a>
         </li>
       </ul>
