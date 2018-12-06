@@ -190,9 +190,15 @@ Love, Jazzerdous  </p>
         <li><a href="#band">Band</a></li>
         <li><a href="#instrument">Instruments</a></li>
         <li><a href="#contact">Contact</a></li>
-        <li><a href="#tour">Events</a></li>
         <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Music<span class="caret"></span></a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="band_event.html">Events<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="band_event.html#local">Local Events</a></li>
+                    <li><a href="band_event.html#events">Upcoming Events</a></li>
+                </ul>
+        </li>  
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="band_music.html">Music<span class="caret"></span></a>
                 <ul class="dropdown-menu">
                     <li><a href="band_music.html">Songs</a></li>
                     <li><a href="#video">Videos</a></li>
@@ -421,12 +427,8 @@ $(document).ready(function(){
     // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
 
-      // Prevent default anchor click behavior
-      event.preventDefault();
-
       // Store hash
       var hash = this.hash;
-
       // Using jQuery's animate() method to add smooth page scroll
       // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({

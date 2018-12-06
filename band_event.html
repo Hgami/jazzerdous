@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Jazzerdous</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet" type="text/css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+  
+  body {
+      font: 400 15px/1.8 Lato, sans-serif;
+      color: #777;
+  }
+  h3,h4 {
+      margin: 10px 0 30px 0;
+      letter-spacing: 10px;      
+      font-size: 20px;
+      color: deeppink !important;
+
+  }
+  
+  .live-show {
+       padding: 70px 0px 2px 0px;
+       text-align: center;
+  }     
+
+  .container {
+      padding: 50px 120px;
+  }
+    
+  .navbar{
+      /*font-family: Montserrat, sans-serif;*/
+      margin-bottom: 0;
+      background-color: #2d2d30;
+      border: 0;
+      font-size: 11px !important;
+      letter-spacing: 4px;
+      opacity: 0.9;
+  }
+  .navbar li a, .navbar { 
+      color: #d5d5d5 !important;
+  }
+  .navbar-nav li a:hover {
+      color: deeppink !important;
+  }
+  .navbar-brand {
+      color: deeppink !important;
+ }
+  .navbar-nav li.active a {
+      color: #fff !important;
+      background-color: #29292c !important;
+  }
+  .navbar-default .navbar-toggle {
+      border-color: transparent;
+  }
+  .open .dropdown-toggle {
+      color: #fff;
+      background-color: #555 !important;
+  }
+  .dropdown-menu li a {
+    color: #555 !important;
+    font-size: 11px !important;
+
+
+  } 
+    
+.agenda .agenda-date { width: 170px; }
+.agenda .agenda-date .dayofmonth {
+  width: 40px;
+  font-size: 36px;
+  line-height: 36px;
+  float: left;
+  text-align: right;
+  margin-right: 45px; 
+      }
+.agenda .agenda-date .shortdate {
+  font-size: .80em; 
+}
+.agenda .agenda-time { width: 100px; } 
+
+  .modal-header-login,.modal-header-login h4,.close {
+      background-color: #5cb85c;
+      color:white !important;
+      text-align: center;
+      font-size: 30px;
+  }
+  .modal-footer {
+      background-color: #f9f9f9;
+  }
+  
+    
+.calender , .local_events {
+      padding: 20px 20px;
+  }
+
+.month {
+    padding: 50px 25px;
+    width: 100%;
+    background:grey;
+    text-align: center;
+}
+
+.month ul {
+    margin: 0;
+    padding: 0;
+}
+
+.month {
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.weekdays {
+    margin: 0;
+    padding: 10px 0;
+    background-color: #ddd;
+}
+
+.weekdays li {
+    display: inline-block;
+    width: 13.6%;
+    color: #666;
+    text-align: center;
+}
+
+.days {
+    padding: 10px 0;
+    background: #eee;
+    margin: 0;
+}
+
+.days li {
+    list-style-type: none;
+    display: inline-block;
+    width: 13.6%;
+    text-align: center;
+    margin-bottom: 5px;
+    font-size:12px;
+    color: #777;
+}
+
+.days li .active {
+    padding: 5px;
+    background:grey;
+    color: white !important
+}
+
+@media screen and (max-width:720px) {
+    .weekdays li, .days li {width: 13.1%;}
+}
+
+@media screen and (max-width: 420px) {
+    .weekdays li, .days li {width: 12.5%;}
+    .days li .active {padding: 2px;}
+}
+
+@media screen and (max-width: 290px) {
+    .weekdays li, .days li {width: 12.2%;}
+}
+
+</style>
+</head>
+    
+<body id="event" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<!-- Slc Model-->
+<div class="modal fade" id="viewDetail_slc" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">RSVP NOW!</h4>
+        </div>
+        <div class="modal-body">
+    <!-- View Details -->
+        <div class="agenda">
+                    <div class="table-responsive">
+                        <table class="table table-condensed table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Single event in a single day -->
+                                <tr>
+                                    <td class="agenda-date" class="active" rowspan="1">
+                                        <div class="dayofmonth">26th </div>
+                                        <div class="dayofweek">Saturday</div>
+                                        <div class="shortdate text-muted">Dec, 2018</div>
+                                    </td>
+                                    <td class="agenda-time">
+                                        5:30 PM
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+            </div> 
+            <button type="button" class="btn btn-info btn-sm"  >RSVP</button><br>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+<!-- Local Area Model-->
+<div class="modal fade" id="viewDetail_local" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">BOOK NOW</h4>
+        </div>
+        <div class="modal-body">
+    <!-- View Details -->
+        <div class="agenda">
+                    <div class="table-responsive">
+                        <table class="table table-condensed table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Location</th>
+                                    <th>Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Single event in a single day -->
+                                <tr>
+                                    <td class="agenda-time" class="active" rowspan="1">
+                                         Bridge stone Arena
+                                    </td>
+                                    <td class="agenda-time">
+                                        7:30 PM
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+            </div> 
+            <button type="button" class="btn btn-info btn-sm"  >RSVP</button><br>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Login Model-->
+<div class="modal fade" id="loginModel" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header-login" style="padding:35px 50px;">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 style=""><span class="glyphicon glyphicon-lock"></span> Login</h4>
+        </div>
+        <div class="modal-body" style="padding:40px 50px;">
+          <form role="form">
+            <div class="form-group">
+              <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+              <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+              <input type="text" class="form-control" id="psw" placeholder="Enter password">
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="" checked>Remember me</label>
+            </div>
+              <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="submit" class="btn btn-danger btn-default pull-left" data-dismiss="modal"><span class="glyphicon glyphicon-remove"></span> Cancel</button>
+          <p>Not a member? <a href="#">Sign Up</a></p>
+          <p>Forgot <a href="#">Password?</a></p>
+        </div>
+      </div>
+      
+    </div>
+  </div> 
+    
+<!-- Navigation Bar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="band_event.html" style="font color: deeppink">Jazzerdous</a>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="home.html#homePage">Home</a></li>
+        <li><a href="home.html#band">Band</a></li>
+        <li><a href="home.html#instrument">Instruments</a></li>
+        <li><a href="home.html#contact">Contact</a></li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Events<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#local">Local Events</a></li>
+                    <li><a href="#events">Upcoming Events</a></li>
+                </ul>
+        </li>  
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Music<span class="caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="band_music.html#songs">Songs</a></li>
+            <li><a href="home.html#video">Videos</a></li>
+          </ul>
+        </li>
+        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Live Shows -->
+
+<div class="live-show">
+  <h3>LIVE SHOWS</h3>
+  <img src="img/event_mainPage.jpg" class="img-responsive" width="100%">
+    <br>
+    <br>
+    <button type="button" class="btn btn-danger btn-md" data-toggle="modal" data-target="#loginModel">Register to view live shows</button>
+     </div>
+
+<br>
+<hr>
+    
+<div id="local" class="local_events">
+<h3 style="text-align: center">LOCAL EVENTS</h3>
+<div class="calender">
+
+<div class="month"> 
+    December<br>
+      <span style="font-size:18px">2018</span>
+</div>
+
+<ul class="weekdays">
+  <li>Mo</li>
+  <li>Tu</li>
+  <li>We</li>
+  <li>Th</li>
+  <li>Fr</li>
+  <li>Sa</li>
+  <li>Su</li>
+</ul>
+
+<ul class="days">  
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#viewDetail_local">8</button></li>
+  <li>9</li>
+  <li>10</li>
+  <li>11</li>
+  <li>12</li>
+  <li>13</li>
+  <li><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#viewDetail_local">14</button></li>
+  <li>15</li>
+  <li>16</li>
+  <li>17</li>
+  <li>18</li>
+  <li>19</li>
+  <li>20</li>
+  <li>21</li>
+  <li>22</li>
+  <li>23</li>
+  <li>24</li>
+  <li><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#viewDetail_local">25 <p>Marry</p> 
+<p>Christmas!</p>
+ </button></li>
+  <li>26</li>
+  <li>27</li>
+  <li>28</li>
+  <li>29</li>
+  <li>30</li>
+  <li><button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#viewDetail_local">31 - New Year Special</button></li>
+</ul>
+    
+</div>
+</div>
+
+<br>
+<hr>
+        
+<!-- Event Dates -->
+<div id="events" class="container">
+<h3 style="text-align: center">UPCOMING EVENTS</h3> 
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <br>
+<h3 style="text-align: center">DETAILS</h3> 
+  <div class="row text-center">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="img/Slc.jpg" alt="Salt Lake City">
+        <p></p>
+        <p>Salt lake City</p>
+        <p><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#viewDetail_slc">View Details</button></p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="img/manhattan.jpg" alt="">
+        <p></p>
+        <p>Manhattan</p>
+        <p><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#viewDetail_slc">View Details</button></p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="img/newyork.jpg" alt="Bharath">
+         <p></p>
+        <p>New Jersy City</p>
+        <p><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#viewDetail_slc">View Details</button></p>
+      </div>
+    </div>
+      
+    </div>
+      <div class="row text-center">
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="img/florida.jpg" alt="Nashville">
+        <p></p>
+        <p>Miami</p>
+        <p><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#viewDetail_slc">View Details</button></p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="img/smoky.jpg" alt="Mexico">
+        <p></p>
+        <p>Smoky Mountain</p>
+        <p><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#viewDetail_slc">View Details</button></p>
+      </div>
+    </div>
+    <div class="col-sm-4">
+      <div class="thumbnail">
+        <img src="img/Kansas.jpg" alt="Australia">
+          <p></p>
+        <p>Salt lake City</p>
+        <p><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#viewDetail_slc">View Details</button></p>      </div>
+    </div>
+    </div>
+    
+
+    </div>
+
+<!-- Footer -->
+<footer class="page-footer special-color-dark pt-4" style="background-color:#2d2d30">
+    <br>
+      <!-- Social buttons -->
+      <ul class="list-unstyled list-inline text-center">
+        <li class="list-inline-item">
+          <a class="btn-floating btn-fb mx-1">
+            <i class="fa fa-facebook"> </i>
+          </a>
+        </li>
+        <li class="list-inline-item">
+          <a class="btn-floating btn-tw mx-1">
+            <i class="fa fa-instagram"> </i>
+          </a>
+        </li>
+      </ul>
+
+    <div class="footer-copyright text-center py-3">© 2018 Copyright:
+      <a href="#"> Jazzerdous</a>
+    </div>
+
+  </footer>
+
+<script>
+$(document).ready(function(){
+  // Initialize Tooltip
+  $('[data-toggle="tooltip"]').tooltip(); 
+  
+  // Add smooth scrolling to all links in navbar + footer link
+  $(".navbar a, footer a[href='#events']").on('click', function(event) {
+
+    // Make sure this.hash has a value before overriding default behavior
+    if (this.hash !== "") {   
+      
+      // Store hash
+      var hash = this.hash;
+        
+        
+      // Using jQuery's animate() method to add smooth page scroll
+      // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 900, function(){
+   
+        // Add hash (#) to URL when done scrolling (default click behavior)
+        window.location.hash = hash;
+      });
+    } // End if
+  });
+})
+</script>
+</body>
+</html>

@@ -102,6 +102,7 @@
     
 <body id="music" data-spy="scroll" data-target=".navbar" data-offset="50">
 
+<!-- Navigation Bar -->
 <nav class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -118,7 +119,13 @@
         <li><a href="home.html#band">Band</a></li>
         <li><a href="home.html#instrument">Instruments</a></li>
         <li><a href="home.html#contact">Contact</a></li>
-        <li><a href="#tour">Events</a></li>
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="band_event.html">Events<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="band_event.html#local">Local Events</a></li>
+                    <li><a href="band_event.html#events">Upcoming Events</a></li>
+                </ul>
+        </li>  
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Music<span class="caret"></span></a>
           <ul class="dropdown-menu">
