@@ -1,268 +1,344 @@
 <!DOCTYPE html>
+<!-- Starting HTML  -->
 <html lang="en">
+
+<!-- Head section -->
+
 <head>
-  <title>Jazzerdous</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet" type="text/css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <style>
-  
-  body {
-      font: 400 15px/1.8 Lato, sans-serif;
-      color: #777;
-  }
-  h3, h4 {
-      margin: 10px 0 30px 0;
-      letter-spacing: 10px;      
-      font-size: 20px;
-      color: deeppink !important;
+    <title>Jazzerdous</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Acme" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-  }
-  
-  .container {
-      padding: 80px 120px;
-  }
-  .carousel-inner img {
-      margin: auto;
-      width: 100%;
-      height: auto;
-  }
-  .carousel-caption h4 {
-      color: black !important;
-      font-family: Acme;
-      font-size: 26px;
-  }
-  .carousel-caption {
-    
-    right : auto;
-    left  : 2%;
-     text-align: left;
-    margin-bottom: 38%
-  } 
-  @media (max-width: 900px) {
-    .carousel-caption p{
-       display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
-    }
-  }
-  @media (max-width: 650px) {
-    .carousel-caption h4{
-       display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
-    }
-  }
-
-  .navbar{
-      /*font-family: Montserrat, sans-serif;*/
-      margin-bottom: 0;
-      background-color: #2d2d30;
-      border: 0;
-      font-size: 11px !important;
-      letter-spacing: 4px;
-      opacity: 0.9;
-  }
-  .navbar li a, .navbar { 
-      color: #d5d5d5 !important;
-  }
-  .navbar-nav li a:hover {
-      color: deeppink !important;
-  }
-  .navbar-brand {
-      color: deeppink !important;
- }
-  .navbar-nav li.active a {
-      color: #fff !important;
-      background-color: #29292c !important;
-  }
-  .navbar-default .navbar-toggle {
-      border-color: transparent;
-  }
-  .open .dropdown-toggle {
-      color: #fff;
-      background-color: #555 !important;
-  }
-  .dropdown-menu li a {
-    color: #555 !important;
-    font-size: 11px !important;
-
-
-  } 
-  @media screen and (max-width: 700px) {
-    .col-sm-4, .col-sm-6 {
-        display: none;
-    }
-  }
-
-  </style>
+    <style>
+        body {
+            font: 400 15px/1.8 Lato, sans-serif;
+            color: #777;
+        }
+        
+        h3,
+        h4 {
+            margin: 10px 0 30px 0;
+            letter-spacing: 10px;
+            font-size: 20px;
+            color: deeppink !important;
+        }
+        
+        .container {
+            padding: 20px 20px;
+        }
+        /* Styling for music_homePage class */
+        
+        .music_homePage {
+            padding: 50px 0px 0px 0px;
+            text-align: center;
+        }
+        
+        .carousel-caption h4 {
+            color: black !important;
+            font-family: Acme;
+            font-size: 26px;
+        }
+        
+        .carousel-caption {
+            top: 8%;
+            bottom: auto;
+            right: auto;
+            left: 2%;
+            text-align: left;
+            margin-bottom: 38%
+        }
+        
+        @media (max-width: 1100px) {
+            .carousel-caption p {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 900px) {
+            .carousel-caption h4 {
+                display: none;
+            }
+        }
+        
+        .navbar {
+            /*font-family: Montserrat, sans-serif;*/
+            margin-bottom: 0;
+            background-color: #2d2d30;
+            border: 0;
+            font-size: 11px !important;
+            letter-spacing: 4px;
+            opacity: 0.9;
+        }
+        
+        .navbar li a,
+        .navbar {
+            color: #d5d5d5 !important;
+        }
+        
+        .navbar-nav li a:hover {
+            color: deeppink !important;
+        }
+        
+        .navbar-brand {
+            color: deeppink !important;
+        }
+        
+        .navbar-nav li.active a {
+            color: #fff !important;
+            background-color: #29292c !important;
+        }
+        
+        .navbar-default .navbar-toggle {
+            border-color: transparent;
+        }
+        
+        .open .dropdown-toggle {
+            color: #fff;
+            background-color: #555 !important;
+        }
+        
+        .dropdown-menu li a {
+            color: #555 !important;
+            font-size: 11px !important;
+        }
+        
+        @media screen and (max-width: 700px) {
+            .col-sm-4,
+            .col-sm-6 {
+                display: none;
+            }
+        }
+        
+        .page-footer li a:hover {
+            color: white;
+        }
+    </style>
 </head>
-    
+
+<!-- Body Section -->
+
 <body id="music" data-spy="scroll" data-target=".navbar" data-offset="50">
 
 <!-- Navigation Bar -->
 <nav class="navbar navbar-default navbar-fixed-top">
-  <div class="container-fluid">
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>                        
-      </button>
-      <a class="navbar-brand" href="home.html#homePage" style="font color: deeppink">Jazzerdous</a>
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="home.html#homePage" style="font color: deeppink">Jazzerdous</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="home.html#homePage">Home</a></li>
+                <li><a href="home.html#band">Band</a></li>
+                <li><a href="home.html#instrument">Instruments</a></li>
+                <li><a href="home.html#contact">Contact</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="band_event.html">Events<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="band_event.html#local">Calender</a></li>
+                        <li><a href="band_event.html#events">Events</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Music<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#songs">Songs</a></li>
+                        <li><a href="home.html#video">Videos</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="home.html#homePage">Home</a></li>
-        <li><a href="home.html#band">Band</a></li>
-        <li><a href="home.html#instrument">Instruments</a></li>
-        <li><a href="home.html#contact">Contact</a></li>
-        <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="band_event.html">Events<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-                    <li><a href="band_event.html#local">Local Events</a></li>
-                    <li><a href="band_event.html#events">Upcoming Events</a></li>
-                </ul>
-        </li>  
-        <li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Music<span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="#songs">Songs</a></li>
-            <li><a href="home.html#video">Videos</a></li>
-          </ul>
-        </li>
-        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
-      </ul>
-    </div>
-  </div>
 </nav>
-
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <!-- Indicators -->
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-    </ol>
-
-    <!-- Wrapper for slides -->
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <img class ="img-responsive" src="img/Murals0062.jpg" alt="Our Music">
+    
+<!-- Music Homepage -->
+<div class="music_homePage">
+        <img class="img-responsive" src="img/Murals0062.jpg" alt="Our Music" width="100%">
         <div class="carousel-caption">
-          <h4>Listen to Music</h4>
-          <p style="color: black ;white-space: pre">We fuel our music with an assortment of inspirations, <br />ranging from classical sounds to traditional jazz and blues.
+            <h4>Listen to Music</h4>
+<p style="color: black ;white-space: pre">We fuel our music with an assortment of inspirations, <br />ranging from classical sounds to traditional jazz and blues.
 Learn more about our songs by reading 
 our lyrics and listening to our tunes!</p>
-        </div>      
-      </div>
+        </div>
     </div>
-</div>
 
-<!--
-<div class="modal fade" id="downloadSong" role="dialog">
-    <div class="modal-dialog modal-sm">
-      <div class="modal-content">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">Success!</h4>
-        </div>
-        <div class="modal-body">
-          <p style="white-space: pre">Thank you for downloading the song. 
-We hope you enjoy listening!
-Love, Jazzerdous! </p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-  </div>   
--->
-    
+<br>
+<br>
+
+<!-- Song Collection  -->
 <div id="songs" class="container">
-<h3 style="text-align: center">MUSICAL SELECTION</h3> 
-<p style="text-align: center">Please enjoy our latest releases below! You can listen to our newest songs and download lyrics.  Support us by purchasing our music on iTunes!  </p>
- <p style="text-align: center; text-decoration: underline;">
-   <a href="#music">Buy from iTunes</a>
- </p>
- <br>
-  <div class="row">
-    <div class="col-sm-5">
-      <img src="img/dolo-iglesias-464654-unsplash.jpg" alt="Jazz" class="img-thumbnail">
-    </div>
-    <div class="col-sm-7">
-      <p>Title  : Philly </p>
-      <p>Song Name : Philly </p>
-        <p>Lyrics :  <a href="https://www.lyrics.com/" > Click here </a> </p>
-      <p>Special Notes : Experience a new take on the original "Philly" classic.</p>        
-<!--      <button class="btn btn-default btn-sm"  data-toggle="modal" data-target="#downloadSong">Play</button>   -->
-      <button class="btn btn-primary btn-sm">Play</button>   
-        
-      </div>
-  </div>
-         <br>
-       <hr>
-    <br>
- 
-    
-      <div class="row">
-    <div class="col-sm-5">
+        <h3 style="text-align: center">MUSICAL SELECTION</h3>
 
-              <img src="img/priscilla-du-preez-216794-unsplash.jpg" alt="Jazz" class="img-thumbnail">
-    </div>
-        <div class="col-sm-7">
-      <p>Title  : Jazz Sampler</p>
-      <p>Song Name : Crossroad Blues</p>
-      <p>Lyrics : <a href="https://www.lyrics.com/" > Click here </a></p>
-      <p>Special Notes : Our Jazz Sampler features a variety of classic jazz tunes!</p>        
-      <button class="btn btn-primary btn-sm">Play</button>   
-      </div>
-  </div>
-    
-             <br>
-       <hr>
-    <br>
-    
-      <div class="row">
-    <div class="col-sm-5">
-      <img src="img/florencia-viadana-716695-unsplash.jpg" alt="Jazz" class="img-thumbnail">
-    </div>
-        <div class="col-sm-7">
-      <p>Title  : The Shrine</p>
-      <p>Song Name : The Shrine Remiz</p>
-      <p>Lyrics : <a href="https://www.lyrics.com/" > Click here </a></p>
-      <p>Special Notes : Enjoy a special rendition of the original and loved classical tune, "The Shrine."</p>        
-      <button class="btn btn-primary btn-sm">Play</button>   
+        <p style="text-align: center">Please enjoy our latest releases below! You can listen to our newest songs and download lyrics. Support us by purchasing our music on iTunes! </p>
+        <p style="text-align: center; text-decoration: underline;">
+            <a href="#music">Buy from iTunes</a>
+        </p>
+        <p style="text-align: center; text-decoration: underline;">
+            <a href="https://geo.itunes.apple.com/us/artist/jazz/1407044470?mt=1&app=music&ls=1" style="display:inline-block;overflow:hidden;background:url(https://linkmaker.itunes.apple.com/embed/v1/app-icon.svg) no-repeat;width:40px;height:40px;" target="_blank"></a>
+        </p>
+        <br>
+        <div class="row">
+            <div class="col-sm-5">
+                <img src="img/dolo-iglesias-464654-unsplash.jpg" alt="Jazz" class="img-thumbnail">
+            </div>
+            <div class="col-sm-7">
+                <p>Title : Philly </p>
+                <p>Song Name : Philly </p>
+                <p>Length : 5 mins </p>
+                <p>Lyrics : <a href="https://www.lyrics.com/"> Click here </a> </p>
+                <p>Special Notes : Experience a new take on the original "Philly" classic.</p>
+                <button class="btn btn-primary btn-sm" type="submit" id="play">Play</button>
+                <button class="btn btn-primary btn-sm" type="submit" id="pause">Pause</button>
+                <button class="btn btn-primary btn-sm" type="submit" id="stop">Stop</button>
 
-      </div>
-  </div>
-    
-    </div>
+            </div>
+        </div>
+        <br>
+        <hr>
+        <br>
 
+        <div class="row">
+            <div class="col-sm-5">
+
+                <img src="img/priscilla-du-preez-216794-unsplash.jpg" alt="Jazz" class="img-thumbnail">
+            </div>
+            <div class="col-sm-7">
+                <p>Title : Jazz Sampler</p>
+                <p>Song Name : Crossroad Blues</p>
+                <p>Length : 5 mins </p>
+                <p>Lyrics : <a href="https://www.lyrics.com/"> Click here </a></p>
+                <p>Special Notes : Our Jazz Sampler features a variety of classic jazz tunes!</p>
+                <button class="btn btn-primary btn-sm" type="submit" id="jazz-play">Play</button>
+                <button class="btn btn-primary btn-sm" type="submit" id="jazz-pause">Pause</button>
+                <button class="btn btn-primary btn-sm" type="submit" id="jazz-stop">Stop</button>
+            </div>
+        </div>
+
+        <br>
+        <hr>
+        <br>
+
+        <div class="row">
+            <div class="col-sm-5">
+                <img src="img/florencia-viadana-716695-unsplash.jpg" alt="Jazz" class="img-thumbnail">
+            </div>
+            <div class="col-sm-7">
+                <p>Title : The Shrine</p>
+                <p>Song Name : The Shrine Remiz</p>
+                <p>Length : 5 mins </p>
+                <p>Lyrics : <a href="https://www.lyrics.com/"> Click here </a></p>
+                <p>Special Notes : Enjoy a special rendition of the original and loved classical tune, "The Shrine."</p>
+                <button class="btn btn-primary btn-sm" type="submit" id="shrine-play">Play</button>
+                <button class="btn btn-primary btn-sm" type="submit" id="shrine-pause">Pause</button>
+                <button class="btn btn-primary btn-sm" type="submit" id="shrine-stop">Stop</button>
+            </div>
+
+        </div>
+    </div>
+    
+<!-- Footer -->
 <footer class="page-footer special-color-dark pt-4" style="background-color:#2d2d30">
-    <br>
-      <!-- Social buttons -->
-      <ul class="list-unstyled list-inline text-center">
-        <li class="list-inline-item">
-          <a class="btn-floating btn-fb mx-1">
-            <i class="fa fa-facebook"> </i>
-          </a>
-        </li>
-        <li class="list-inline-item">
-          <a class="btn-floating btn-tw mx-1">
-            <i class="fa fa-instagram"> </i>
-          </a>
-        </li>
-      </ul>
-      <!-- Social buttons -->
+        <br>
+        <!-- Social buttons -->
+        <ul class="list-unstyled list-inline text-center">
+            <li class="list-inline-item">
+                <a class="btn-floating btn-fb mx-1">
+                    <i class="fa fa-facebook"> </i>
+                </a>
+            </li>
+            <li class="list-inline-item">
+                <a class="btn-floating btn-tw mx-1">
+                    <i class="fa fa-instagram"> </i>
+                </a>
+            </li>
+        </ul>
+        <!-- Social buttons -->
 
-    <!-- Copyright -->
-    <div class="footer-copyright text-center py-3">© 2018 Copyright:
-      <a href="#"> Jazzerdous</a>
-    </div>
+        <!-- Copyright -->
+        <div class="footer-copyright text-center py-3">© 2018 Copyright:
+            <a href="#"> Jazzerdous</a>
+        </div>
+</footer>
 
-  </footer>
+<!-- Inline Scripting -->
+<script>
+        $(document).ready(function() {
+            var audioElement = document.createElement('audio');
+            audioElement.setAttribute('src', 'music/philly.mp3');
+
+            audioElement.addEventListener('ended', function() {
+                this.play();
+            }, false);
+
+            $('#play').click(function() {
+                audioElement.play();
+            });
+
+            $('#pause').click(function() {
+                audioElement.pause();
+            });
+
+            $('#stop').click(function() {
+                audioElement.currentTime = 0;
+                audioElement.pause();
+
+            });
+
+            var jazzaudioElement = document.createElement('audio');
+            jazzaudioElement.setAttribute('src', 'music/Jazz.mp3');
+
+            jazzaudioElement.addEventListener('ended', function() {
+                this.play();
+            }, false);
+
+            $('#jazz-play').click(function() {
+                jazzaudioElement.play();
+            });
+
+            $('#jazz-pause').click(function() {
+                jazzaudioElement.pause();
+            });
+
+            $('#jazz-stop').click(function() {
+                jazzaudioElement.currentTime = 0;
+                jazzaudioElement.pause();
+            });
+
+            var shrineaudioElement = document.createElement('audio');
+            shrineaudioElement.setAttribute('src', 'music/shrine.mp3');
+
+            shrineaudioElement.addEventListener('ended', function() {
+                this.play();
+            }, false);
+
+            $('#shrine-play').click(function() {
+                shrineaudioElement.play();
+            });
+
+            $('#shrine-pause').click(function() {
+                shrineaudioElement.pause();
+            });
+
+            $('#shrine-stop').click(function() {
+                shrineaudioElement.currentTime = 0;
+                shrineaudioElement.pause();
+
+            });
+
+        });
+    </script>
 
 </body>
 </html>

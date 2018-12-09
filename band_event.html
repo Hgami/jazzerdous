@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- Head section -->
 <head>
   <title>Jazzerdous</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
@@ -31,7 +33,7 @@
   }     
 
   .container {
-      padding: 50px 120px;
+      padding: 20px 20px;
   }
     
   .navbar{
@@ -85,14 +87,13 @@
 .agenda .agenda-time { width: 100px; } 
 
   .modal-header-login,.modal-header-login h4,.close {
-      background-color: #5cb85c;
+      background-color: dimgrey;
       color:white !important;
       text-align: center;
       font-size: 30px;
   }
-  .modal-footer {
-      background-color: #f9f9f9;
-  }
+  .modal-footer {background-color: #eee;}
+
   
     
 .calender , .local_events {
@@ -166,13 +167,17 @@
     .weekdays li, .days li {width: 12.2%;}
 }
 
-</style>
+
+        .page-footer li a:hover {
+            color: white;
+        }
+    </style>
 </head>
     
 <body id="event" data-spy="scroll" data-target=".navbar" data-offset="50">
 
-<!-- Slc Model-->
-<div class="modal fade" id="viewDetail_slc" role="dialog">
+<!-- Wally's Cafe Jazz Club Model-->
+<div class="modal fade" id="viewDetail_Wally" role="dialog">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
         <div class="modal-header">
@@ -194,19 +199,19 @@
                                 <!-- Single event in a single day -->
                                 <tr>
                                     <td class="agenda-date" class="active" rowspan="1">
-                                        <div class="dayofmonth">26th </div>
-                                        <div class="dayofweek">Saturday</div>
+                                        <div class="dayofmonth">14th </div>
+                                        <div class="dayofweek">Monday</div>
                                         <div class="shortdate text-muted">Dec, 2018</div>
                                     </td>
                                     <td class="agenda-time">
-                                        5:30 PM
+                                        8:00 PM
                                     </td>
                                 </tr>
                             </tbody>
                         </table>
                     </div>
             </div> 
-            <button type="button" class="btn btn-info btn-sm"  >RSVP</button><br>
+            <button type="button" class="btn btn-info btn-sm" id="rsvp">RSVP</button><br>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -214,14 +219,14 @@
       </div>
     </div>
   </div>
-    
-<!-- Local Area Model-->
-<div class="modal fade" id="viewDetail_local" role="dialog">
+
+<!-- Les Zygomates Model-->
+<div class="modal fade" id="viewDetail_Les" role="dialog">
     <div class="modal-dialog modal-sm">
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h4 class="modal-title">BOOK NOW</h4>
+          <h4 class="modal-title">RSVP NOW!</h4>
         </div>
         <div class="modal-body">
     <!-- View Details -->
@@ -230,15 +235,17 @@
                         <table class="table table-condensed table-bordered">
                             <thead>
                                 <tr>
-                                    <th>Location</th>
+                                    <th>Date</th>
                                     <th>Time</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <!-- Single event in a single day -->
                                 <tr>
-                                    <td class="agenda-time" class="active" rowspan="1">
-                                         Bridge stone Arena
+                                    <td class="agenda-date" class="active" rowspan="1">
+                                        <div class="dayofmonth">8th </div>
+                                        <div class="dayofweek">Monday</div>
+                                        <div class="shortdate text-muted">Dec, 2018</div>
                                     </td>
                                     <td class="agenda-time">
                                         7:30 PM
@@ -256,7 +263,183 @@
       </div>
     </div>
   </div>
-
+    
+<!-- Beehive Restaurant Model-->
+<div class="modal fade" id="viewDetail_Beehive" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">RSVP NOW!</h4>
+        </div>
+        <div class="modal-body">
+    <!-- View Details -->
+        <div class="agenda">
+                    <div class="table-responsive">
+                        <table class="table table-condensed table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Single event in a single day -->
+                                <tr>
+                                    <td class="agenda-date" class="active" rowspan="1">
+                                        <div class="dayofmonth">25th </div>
+                                        <div class="dayofweek">Thrusday</div>
+                                        <div class="shortdate text-muted">Dec, 2018</div>
+                                    </td>
+                                    <td class="agenda-time">
+                                        7:00 PM
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+            </div> 
+            <button type="button" class="btn btn-info btn-sm"  >RSVP</button><br>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+<!-- Lucky's Lounge Model-->
+<div class="modal fade" id="viewDetail_Lucky" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">RSVP NOW!</h4>
+        </div>
+        <div class="modal-body">
+    <!-- View Details -->
+        <div class="agenda">
+                    <div class="table-responsive">
+                        <table class="table table-condensed table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Single event in a single day -->
+                                <tr>
+                                    <td class="agenda-date" class="active" rowspan="1">
+                                        <div class="dayofmonth">31th </div>
+                                        <div class="dayofweek">Wenesday</div>
+                                        <div class="shortdate text-muted">Dec, 2018</div>
+                                    </td>
+                                    <td class="agenda-time">
+                                        8:00 PM
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+            </div> 
+            <button type="button" class="btn btn-info btn-sm"  >RSVP</button><br>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+<!-- Regattabar Model-->
+<div class="modal fade" id="viewDetail_Regattabar" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">RSVP NOW!</h4>
+        </div>
+        <div class="modal-body">
+    <!-- View Details -->
+        <div class="agenda">
+                    <div class="table-responsive">
+                        <table class="table table-condensed table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Single event in a single day -->
+                                <tr>
+                                    <td class="agenda-date" class="active" rowspan="1">
+                                        <div class="dayofmonth">7th </div>
+                                        <div class="dayofweek">Wenesday</div>
+                                        <div class="shortdate text-muted">Jan, 2019</div>
+                                    </td>
+                                    <td class="agenda-time">
+                                        8:30 PM
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+            </div> 
+            <button type="button" class="btn btn-info btn-sm"  >RSVP</button><br>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    
+<!-- Battery Lounge Model-->
+<div class="modal fade" id="viewDetail_Battery" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">RSVP NOW!</h4>
+        </div>
+        <div class="modal-body">
+    <!-- View Details -->
+        <div class="agenda">
+                    <div class="table-responsive">
+                        <table class="table table-condensed table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Single event in a single day -->
+                                <tr>
+                                    <td class="agenda-date" class="active" rowspan="1">
+                                        <div class="dayofmonth">10th </div>
+                                        <div class="dayofweek">Saturday</div>
+                                        <div class="shortdate text-muted">Jan, 2019</div>
+                                    </td>
+                                    <td class="agenda-time">
+                                        7:00 PM
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+            </div> 
+            <button type="button" class="btn btn-info btn-sm"  >RSVP</button><br>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+    
 <!-- Login Model-->
 <div class="modal fade" id="loginModel" role="dialog">
     <div class="modal-dialog">
@@ -278,7 +461,7 @@
             <div class="checkbox">
               <label><input type="checkbox" value="" checked>Remember me</label>
             </div>
-              <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+              <button type="submit" class="btn btn-primary btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
           </form>
         </div>
         <div class="modal-footer">
@@ -322,14 +505,12 @@
             <li><a href="home.html#video">Videos</a></li>
           </ul>
         </li>
-        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
       </ul>
     </div>
   </div>
 </nav>
 
 <!-- Live Shows -->
-
 <div class="live-show">
   <h3>LIVE SHOWS</h3>
   <img src="img/event_mainPage.jpg" class="img-responsive" width="100%">
@@ -340,11 +521,14 @@
 
 <br>
 <hr>
-    
-<div id="local" class="local_events">
-<h3 style="text-align: center">LOCAL EVENTS</h3>
-<div class="calender">
 
+<!-- Calender -->
+<div id="local" class="local_events">
+<h3 style="text-align: center">CALENDER</h3>
+
+<div class="calender">
+<p>Come see us perform live. Although we primarily play around the Boston area, we are excited to announce that we are expanding our reach and have plans to play in some new cities. We are really excited to play in some new locations and hope you will join us. We also have plans to play at home, too, so there will be opportunities to catch us locally!</p>
+<p>Check out the detail information below! </p>
 <div class="month"> 
     December<br>
       <span style="font-size:18px">2018</span>
@@ -368,13 +552,13 @@
   <li>5</li>
   <li>6</li>
   <li>7</li>
-  <li><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#viewDetail_local">8</button></li>
+  <li><button type="button" id ="Les" class="btn btn-danger btn-sm">8</button></li>
   <li>9</li>
   <li>10</li>
   <li>11</li>
   <li>12</li>
   <li>13</li>
-  <li><button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#viewDetail_local">14</button></li>
+  <li><button type="button" id ="Wally" class="btn btn-danger btn-sm">14</button></li>
   <li>15</li>
   <li>16</li>
   <li>17</li>
@@ -385,15 +569,15 @@
   <li>22</li>
   <li>23</li>
   <li>24</li>
-  <li><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#viewDetail_local">25 <p>Marry</p> 
-<p>Christmas!</p>
+  <li><button type="button" id ="Beehive" class="btn btn-primary btn-sm">25 <p>Christmas</p> 
+<p>Special!</p>
  </button></li>
   <li>26</li>
   <li>27</li>
   <li>28</li>
   <li>29</li>
   <li>30</li>
-  <li><button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#viewDetail_local">31 - New Year Special</button></li>
+  <li><button type="button" id ="Lucky" class="btn btn-success btn-sm">31 - New Year Special</button></li>
 </ul>
     
 </div>
@@ -404,33 +588,31 @@
         
 <!-- Event Dates -->
 <div id="events" class="container">
-<h3 style="text-align: center">UPCOMING EVENTS</h3> 
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    <br>
-<h3 style="text-align: center">DETAILS</h3> 
+        <br>
+<h3 style="text-align: center">EVENT DETAILS</h3> 
   <div class="row text-center">
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="img/Slc.jpg" alt="Salt Lake City">
+        <img src="img/Slc.jpg" alt="Wally's Cafe Jazz Club">
         <p></p>
-        <p>Salt lake City</p>
-        <p><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#viewDetail_slc">View Details</button></p>
+        <p>Wally's Cafe Jazz Club</p>
+        <p><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#viewDetail_Wally">View Details</button></p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="img/manhattan.jpg" alt="">
+        <img src="img/manhattan.jpg" alt="Les Zygomates">
         <p></p>
-        <p>Manhattan</p>
-        <p><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#viewDetail_slc">View Details</button></p>
+        <p>Les Zygomates</p>
+        <p><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#viewDetail_Les">View Details</button></p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="img/newyork.jpg" alt="Bharath">
+        <img src="img/newyork.jpg" alt="Beehive Restaurant">
          <p></p>
-        <p>New Jersy City</p>
-        <p><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#viewDetail_slc">View Details</button></p>
+        <p>Beehive Restaurant</p>
+        <p><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#viewDetail_Beehive">View Details</button></p>
       </div>
     </div>
       
@@ -438,30 +620,28 @@
       <div class="row text-center">
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="img/florida.jpg" alt="Nashville">
+        <img src="img/florida.jpg" alt="Lucky's Lounge">
         <p></p>
-        <p>Miami</p>
-        <p><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#viewDetail_slc">View Details</button></p>
+        <p>Lucky's Lounge</p>
+        <p><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#viewDetail_Lucky">View Details</button></p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="img/smoky.jpg" alt="Mexico">
+        <img src="img/smoky.jpg" alt="Regattabar">
         <p></p>
-        <p>Smoky Mountain</p>
-        <p><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#viewDetail_slc">View Details</button></p>
+        <p>Regattabar</p>
+        <p><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#viewDetail_Regattabar">View Details</button></p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
-        <img src="img/Kansas.jpg" alt="Australia">
+        <img src="img/Kansas.jpg" alt="Battery Lounge">
           <p></p>
-        <p>Salt lake City</p>
-        <p><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#viewDetail_slc">View Details</button></p>      </div>
+        <p>Battery Lounge</p>
+        <p><button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#viewDetail_Battery">View Details</button></p>      </div>
     </div>
     </div>
-    
-
     </div>
 
 <!-- Footer -->
@@ -489,6 +669,10 @@
 
 <script>
 $(document).ready(function(){
+
+$("#rsvp").click(function(){
+    window.location.href="band_rsvp.html";
+});
   // Initialize Tooltip
   $('[data-toggle="tooltip"]').tooltip(); 
   

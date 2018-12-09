@@ -8,7 +8,7 @@
   <title>Jazzerdous</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico"/ >
+  <link rel="icon" type="image/x-icon" href="favicon.ico"/>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
@@ -33,33 +33,31 @@
 
   }
   .container {
-      padding: 80px 120px;
+      padding: 20px 20px;
   }
 
-/* Styling for carousel */
-  .carousel-inner img {
-      margin: auto;
-      width: 100%;
-      height: auto;
-      position: relative;
-    }
+/* Styling for band_homePage class */
+  .band_homePage {
+       padding: 50px 0px 0px 0px;
+       text-align: center;
+  } 
   .carousel-caption h4 {
       color: black !important;
       font-family: Acme;
       font-size: 26px;
   }
   .carousel-caption {
-    top : 5%;
+    top : 8%;
     bottom: auto;
 } 
-  @media (max-width: 900px) {
+  @media (max-width: 1100px) {
     .carousel-caption p{
-       display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+       display: none;
     }
   }
-  @media (max-width: 650px) {
+  @media (max-width: 900px) {
     .carousel-caption h4{
-       display: none; /* Hide the carousel text when the screen is less than 600 pixels wide */
+       display: none; 
     }
   }
 
@@ -105,6 +103,7 @@
     }
   }
 
+.page-footer li a:hover {color: white;}
 </style>
 </head>
 
@@ -123,6 +122,25 @@
           <p style="white-space: pre">Thank you for connecting with us! 
 You will hear from us soon. 
 Love, Jazzerdous! </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Email Alert -->
+    
+<div class="modal fade" id="emailAlert" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4>ALERT!</h4>
+        </div>
+        <div class="modal-body">
+          <p class ="alert alert-danger">Please enter valid Email Address!</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -193,8 +211,8 @@ Love, Jazzerdous  </p>
         <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="band_event.html">Events<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                    <li><a href="band_event.html#local">Local Events</a></li>
-                    <li><a href="band_event.html#events">Upcoming Events</a></li>
+                    <li><a href="band_event.html#local">Calender</a></li>
+                    <li><a href="band_event.html#events">Events</a></li>
                 </ul>
         </li>  
         <li class="dropdown">
@@ -204,59 +222,34 @@ Love, Jazzerdous  </p>
                     <li><a href="#video">Videos</a></li>
                 </ul>
         </li>
-        <li><a href="#"><span class="glyphicon glyphicon-search"></span></a></li>
       </ul>
     </div>
   </div>
 </nav>
 
-<!-- Carousel -->
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-    </ol>
-
-    <div class="carousel-inner" role="listbox">
-      <div class="item active">
-        <img class ="img-responsive" src="img/jazzmural1.jpg" alt="Our Music">
+<!-- Home Page -->    
+<div class="band_homePage">
+    <img class ="img-responsive" src="img/band_homePage.jpg" alt="Our Music" width="100%">
         <div class="carousel-caption">
           <h4>Boston Based Jazz Band</h4>
-          <p style="color: black ;white-space: pre" >We love music and so do you.  Spruce up your nightlife!
-   Come see us, we play all over the Boston area.</p>
-        </div>      
-      </div>
-        
-      <div class="item">
-        <img class="img-responsive:" src="img/jazzmurals.jpg" alt="Live Events">
-        <div class="carousel-caption">
-          <h4 style="margin-top: 75%;font color: white">Live Events</h4>
-          <p style="color: whitesmoke;white-space: pre;">While we would love for you to engage with us online; we would love to meet you in person!.
-        We play concerts at small and large venues, so don't be shy, come see us play</p>
-        </div>      
-      </div>
-    </div>
+          <p style="color: black ;white-space: pre" >We love music and so do you. Time pruce up your nightlife!
+Come see us, we play all over the Boston area.</p>
+        </div>   
+     </div>
 
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
-</div>
+<br>
     
-<!-- Container (About the Band) -->
+<!-- About the Band -->
 <div id="band" class="container">
   <div class="row">
     <div class="col-sm-8">
-        <h3 style="text-align: center">THE BAND</h3>    
-         <p>We are five-person jazz band with an eclectic sound. Our inspirations stem from country to classical and jazz. We fuel our music with an assortment of inspirations, ranging from classical sounds to traditional blues.  We are influenced by all of the great jazz artists, present and past, but we also aim to create unique music which resonates with our spirit and our listeners. We cherish Boston's lively music scene, which keeps us grounded in our roots as well as new inspiration. 
+        <h3 style="text-align: center">THE BAND</h3>  
+        <br>
+         <p>We are five-person jazz band with an eclectic sound. Our inspirations stem from country to classical and jazz. We fuel our music with an assortment of inspirations, ranging from classical sounds to traditional blues.  We are influenced by all of the great jazz artists, present and past, but we also aim to create unique music which resonates with our spirit and our listeners. We cherish Boston's lively music scene, which keeps us grounded in our roots as well as new inspiration.</p>
+         <p>The members of the band include Brian Wilson as the lead vocalist and playing the Electric Guitar, Dan Johnson who plays the drums, Pete Williams on the Piano, Sam Davis on the Saxophone as well as the trumpet and Bob Miller plays the upright bass.
+         All the band members live in the greater Boston Area and are proficient with playing more than one musical instrument and are also the back-up vocals for their songs.</p>
           <br />
-          <br/>
-        Learn more about our songs by reading our lyrics and listening to our tunes. We would love to see you at a concert. Thank you for listening and for tuning in!</p>
+        <p>Learn more about our songs by reading our lyrics and listening to our tunes. We would love to see you at a concert. Thank you for listening and for tuning in!</p>
       </div>
     <div class="col-sm-4">
         <span><img class="img-thumbnail" src="img/13MILES-blog427.jpg" alt="Jazz" ></span>
@@ -266,18 +259,27 @@ Love, Jazzerdous  </p>
 
 <hr>
 
-<!-- Container (Instruments) -->
+<!-- Instruments -->
 <div id="instrument" class="container">
   <div class="row">
     <div class="col-sm-8">
         <h3 style="text-align: center">INSTRUMENTS</h3>    
-         <p>Most of us play multiple instruments but we do have our favorites. </p>
+        <p>Most of us play multiple instruments but we do have our favorites. </p>
+         <p><strong> 1) Saxophone</strong></p> 
+        <p>The saxophone is used in classical music (such as concert bands, chamber music, solo repertoire, and, occasionally, orchestras), military bands, marching bands, and jazz (such as big bands and jazz combos)..</p>
+                 
+        <p><strong> 2) Drums</strong></p> 
+        <p>Drums is a collection of drums and other percussion instruments, typically cymbals, which are set up on stands to be played by a single player,</p>
+                 
+        <p><strong> 3) Trumpet</strong></p> 
+        <p>A trumpet is a brass instrument commonly used in classical and jazz ensembles. The trumpet group contains the instruments with the highest register in the brass family.</p>
+                 
+        <p><strong> 4) Electric guitar</strong></p> 
+        <p>An electric guitar is a guitar that uses one or more pickups to convert the vibration of its strings into electrical signals. The vibration occurs when a guitar player strums, plucks, fingerpicks, slaps or taps the strings</p>
+                 
+        <p><strong> 5) Upright Bass</strong></p> 
+        <p>The double bass, or simply the bass (and numerous other names), is the largest and lowest-pitched bowed string instrument in the modern symphony orchestra</p>
 
-        <ul>
-          <li>Saxaphonist - We have a brilliant trumpet player and saxaphonist who keep us on our toes with their improvisational skills. </li><br/>
-          <li>Drummer - Our drummist keeps a steady beat and our pianist plays lively, rhythmic melodies. </li><br/>
-          <li>Rythm - Our guitarist keeps our pianist company, playing beautiful melodies.</li><br/>
-        </ul>
       </div>
     <div class="col-sm-4">
        <span><img src="img/frame-harirak-641889-unsplash.jpg" alt="Instruments" class="img-thumbnail"></span>
@@ -287,7 +289,7 @@ Love, Jazzerdous  </p>
 
 <hr>    
 
-<!-- Container (Gallery) -->
+<!-- Gallery -->
 <div id="gallery" class="container">
 <h3 style="text-align: center">GALLERY</h3> 
     <p>We have performed all different cities near Boston area.  Check out some of our past concerts!</p>
@@ -300,19 +302,22 @@ Love, Jazzerdous  </p>
     <div class="col-sm-4">
       <div class="thumbnail">
         <img src="img/hanny-naibaho-388579-unsplash.jpg" alt="Paris">
+         <p></p>
         <p><strong>Brookline</strong></p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
         <img src="img/keagan-henman-1126214-unsplash.jpg" alt="New York">
+          <p></p>
         <p><strong>Winchester</strong></p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
         <img src="img/nqobile-vundla-573152-unsplash.jpg" alt="Bharath">
-        <p><strong>Revere</strong></p>
+          <p></p>
+          <p><strong>Revere</strong></p>
       </div>
     </div>
       
@@ -321,19 +326,22 @@ Love, Jazzerdous  </p>
     <div class="col-sm-4">
       <div class="thumbnail">
         <img src="img/kyle-smith-1136780-unsplash.jpg" alt="Nashville">
-        <p><strong>Arlington</strong></p>
+            <p></p>
+          <p><strong>Arlington</strong></p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
         <img src="img/bailey-torres-677277-unsplash.jpg" alt="Mexico">
-        <p><strong>Chelsea</strong></p>
+          <p></p>
+          <p><strong>Chelsea</strong></p>
       </div>
     </div>
     <div class="col-sm-4">
       <div class="thumbnail">
         <img src="img/yvette-de-wit-118721-unsplash.jpg" alt="Australia">
-        <p><strong>Cambridge</strong></p>
+            <p></p>
+          <p><strong>Cambridge</strong></p>
       </div>
     </div>
     </div>
@@ -341,7 +349,7 @@ Love, Jazzerdous  </p>
     
 <hr>
 
-<!-- Container (Video) -->
+<!-- Video -->
 <div id="video" class="container">
     <h3 style="text-align: center">VIDEOS</h3>    
     <p>We have included some wonderful compilations of jazz music in the videos below!  We play all of these tunes live.  We hope to see you at a concert soon! </p> 
@@ -361,16 +369,17 @@ Love, Jazzerdous  </p>
 
 <hr> 
     
-<!-- Container (Contact Section) -->
+<!-- Contact Section -->
 <div id="contact" class="container">
   <h3 class="text-center">CONTACT</h3>
   <div class="row">
     <div class="col-md-4">
-      <p>Drop us a line.</p>
       <p><span class="glyphicon glyphicon-map-marker"></span>Boston, US</p>
       <p><span class="glyphicon glyphicon-phone"></span>Phone: +15151515</p>
       <p><span class="glyphicon glyphicon-envelope"></span>Email: love@jazzerdous.com</p>
-        <p><span><button type="button" class="btn btn-success btn-sm" data-toggle="modal" data-target="#subscribe">Suscribe</button>            <button type="button" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#unsus">Unsubscribe</button></span></p>
+        <p><span><input class="form-control" id="emailsus" name="email" placeholder="Email Address for Suscribe/Unsuscribe" type="email"></span></p>
+        <p><span><button type="submit" class="btn btn-success btn-sm" data-value="true" id="suscribe">Suscribe</button>            
+            <button type="submit" class="btn btn-danger btn-sm" id="unsuscribe">Unsubscribe</button></span></p>
     </div>
     <div class="col-md-8">
       <div class="row">
@@ -378,14 +387,14 @@ Love, Jazzerdous  </p>
           <input class="form-control" id="name" name="name" placeholder="Name" type="text" required>
         </div>
         <div class="col-sm-6 form-group">
-          <input class="form-control" id="email" name="email" placeholder="Email" type="email" required>
+          <input class="form-control" id="email" name="email" placeholder="Email" type="text" required>
         </div>
       </div>
       <textarea class="form-control" id="comments" name="comments" placeholder="Comment" rows="5"></textarea>
-      <br>
+        <br>
       <div class="row">
         <div class="col-md-12 form-group">
-        <button type="button" class="btn btn-info btn-sm" style ="float: right" data-toggle="modal" data-target="#sendMsg">Send</button>
+        <button type="submit" class="btn btn-info btn-sm" style ="float: right " id="send">Send</button>
         </div>
       </div>
     </div>
@@ -408,16 +417,62 @@ Love, Jazzerdous  </p>
           </a>
         </li>
       </ul>
-
     <div class="footer-copyright text-center py-3">© 2018 Copyright:
-      <a href="#"> Jazzerdous</a>
+      <a href="#band"> Jazzerdous</a>
     </div>
-
   </footer>
 
 <!-- Inline scripting -->
 <script>
-$(document).ready(function(){
+    
+function validateEmail(sEmail) {
+    var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+    if (filter.test(sEmail)) {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+    
+$(document).ready(function(e){
+     
+$('#send').click(function() {
+        var sEmail = $('#email').val();
+
+        if ($.trim(sEmail).length == 0) {
+            $('#emailALert').modal('show');
+        }
+        if (validateEmail(sEmail)) {
+            $('#sendMsg').modal('show');
+        }
+        else {
+            $('#emailAlert').modal('show');
+        }
+    });
+    
+   $("#suscribe").click(function(){
+        var sEmail = $('#emailsus').val();
+       
+        if (validateEmail(sEmail)) {
+            $('#subscribe').modal('show');
+        }
+        else {
+            $('#emailAlert').modal('show');
+        }
+    });
+
+    
+   $("#unsuscribe").click(function(){
+        var sEmail = $('#emailsus').val();
+        if (validateEmail(sEmail)) {
+            $('#unsus').modal('show');
+        }
+        else {
+            $('#emailAlert').modal('show');
+        }
+   })
+    
   // Initialize Tooltip
   $('[data-toggle="tooltip"]').tooltip(); 
   
@@ -441,9 +496,9 @@ $(document).ready(function(){
     } // End if
   });
 })
+    
 </script>
 
 </body>
-
 
 </html>
