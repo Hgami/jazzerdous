@@ -17,94 +17,10 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src='https://js.stripe.com/v2/' type='text/javascript'></script>
-  
+    <link rel="stylesheet" type="text/css" href="css/band_rsvp.css">
+
     </head>
 
-<style>
-
-/* Styling for html document */   
-  body {
-      font: 400 15px/1.8 Lato, sans-serif;
-  }
-  h3, h4 {
-      margin: 10px 0 30px 0;
-      letter-spacing: 10px;      
-      font-size: 20px;
-      color: deeppink !important;
-
-  }
-  .container {
-      padding: 10px 20px;
-  }
-
-/* Styling for navigation */
-  .navbar{
-      /*font-family: Montserrat, sans-serif;*/
-      margin-bottom: 0;
-      background-color: #2d2d30;
-      border: 0;
-      font-size: 11px !important;
-      letter-spacing: 4px;
-      opacity: 0.9;
-  }
-  .navbar li a, .navbar { 
-      color: #d5d5d5 !important;
-  }
-  .navbar-nav li a:hover {
-      color: deeppink !important;
-  }
-  .navbar-brand {
-      color: deeppink !important;
- }
-  .navbar-nav li.active a {
-      color: #fff !important;
-      background-color: #29292c !important;
-  }
-  .navbar-default .navbar-toggle {
-      border-color: transparent;
-  }
-  .open .dropdown-toggle {
-      color: #fff;
-      background-color: #555 !important;
-  }
-  .dropdown-menu li a {
-    color: #555 !important;
-    font-size: 11px !important;
-  }
-    
-.submit-button {
-  margin-top: 10px;
-}  
-  .rsvp {
-       padding: 0px 0px 2px 0px;
-       text-align: center;
-  }     
-    .col-md-8,.col-md-4{
-        text-align:left;
-    }
-     
-.agenda .agenda-date { width: 170px; }
-.agenda .agenda-date .dayofmonth {
-  width: 60px;
-  font-size: 36px;
-  line-height: 36px;
-  float: left;
-  text-align: right;
-  margin-right: 45px; 
-      }
-.agenda .agenda-date .shortdate {
-  font-size: .80em; 
-}
-.agenda .agenda-time { width: 100px; }    
-.page-footer li a:hover {color: white;}
-
-  }
-    .rsvp_homepage{
-        margin: 0px 0 0px 0;
-      letter-spacing: 10px;      
-      font-size: 20px;
-    }
-</style>
 <body>
 
 <!-- Success RSVP -->
@@ -146,12 +62,12 @@
         <li><a href="home.html#instrument">Instruments</a></li>
         <li><a href="home.html#contact">Contact</a></li>
         <li class="dropdown">
-            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Events<span class="caret"></span></a>
+            <a class="dropdown-toggle" data-toggle="dropdown" href="band_event.html">Events<span class="caret"></span></a>
                 <ul class="dropdown-menu">
-                    <li><a href="#local">Local Events</a></li>
-                    <li><a href="#events">Upcoming Events</a></li>
+                    <li><a href="band_event.html#local">Calendar</a></li>
+                    <li><a href="band_event.html#events">Events</a></li>
                 </ul>
-        </li>  
+        </li> 
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="dropdown" href="#">Music<span class="caret"></span></a>
           <ul class="dropdown-menu">
@@ -165,8 +81,6 @@
 </nav>
 
 <!--Events Detail Information -->
-
-<!-- Contact Section -->
 <div class="jumbotron ">
     <br>
      <h4 class="rsvp_homepage" style="text-align: center;padding-top: 10px;">EVENT DETAILS   
@@ -207,7 +121,6 @@
       </div>
     </div>
 
-    
 <!-- RSVP Details -->
 <div class ="rsvp">
 <div class="container">
@@ -222,8 +135,7 @@
     </div>
 </div>    
 </div>    
-
-    
+   
 <div class="rsvp">
 <div class="container">
     <div class='row'>
@@ -328,7 +240,6 @@
 </div>
 </div>
     
-
 <!-- Footer -->
 <footer class="page-footer special-color-dark pt-4" style="background-color:#2d2d30">
     <br>

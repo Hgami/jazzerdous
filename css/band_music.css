@@ -1,0 +1,104 @@
+
+
+        body {
+            font: 400 15px/1.8 Lato, sans-serif;
+            color: #777;
+        }
+        
+        h3,
+        h4 {
+            margin: 10px 0 30px 0;
+            letter-spacing: 10px;
+            font-size: 20px;
+            color: deeppink !important;
+        }
+        
+        .container {
+            padding: 20px 20px;
+        }
+        /* Styling for music_homePage class */
+        
+        .music_homePage {
+            padding: 50px 0px 0px 0px;
+            text-align: center;
+        }
+        
+        .carousel-caption h4 {
+            color: black !important;
+            font-family: Acme;
+            font-size: 26px;
+        }
+        
+        .carousel-caption {
+            top: 8%;
+            bottom: auto;
+            right: auto;
+            left: 2%;
+            text-align: left;
+            margin-bottom: 38%
+        }
+        
+        @media (max-width: 1100px) {
+            .carousel-caption p {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 900px) {
+            .carousel-caption h4 {
+                display: none;
+            }
+        }
+        
+        .navbar {
+            /*font-family: Montserrat, sans-serif;*/
+            margin-bottom: 0;
+            background-color: #2d2d30;
+            border: 0;
+            font-size: 11px !important;
+            letter-spacing: 4px;
+            opacity: 0.9;
+        }
+        
+        .navbar li a,
+        .navbar {
+            color: #d5d5d5 !important;
+        }
+        
+        .navbar-nav li a:hover {
+            color: deeppink !important;
+        }
+        
+        .navbar-brand {
+            color: deeppink !important;
+        }
+        
+        .navbar-nav li.active a {
+            color: #fff !important;
+            background-color: #29292c !important;
+        }
+        
+        .navbar-default .navbar-toggle {
+            border-color: transparent;
+        }
+        
+        .open .dropdown-toggle {
+            color: #fff;
+            background-color: #555 !important;
+        }
+        
+        .dropdown-menu li a {
+            color: #555 !important;
+            font-size: 11px !important;
+        }
+        
+        @media screen and (max-width: 700px) {
+            .col-sm-4,
+            .col-sm-6 {
+                display: none;
+            }
+        }
+        
+        .page-footer li a:hover {
+            color: white;
+        }
